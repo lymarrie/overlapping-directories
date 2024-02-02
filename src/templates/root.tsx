@@ -72,12 +72,12 @@ const Index: Template<TemplateRenderProps> = ({
   document,
   __meta,
 }) => {
-  const { dm_directoryChildren } = document;
+  const { name, dm_directoryChildren } = document;
 
   return (
     <>
       <PageLayout templateData={{__meta, document}}>
-        <Banner name={"Turtlehead Tacos"} />
+        <Banner name={name} />
         <div className="centered-container">
           <div className="section space-y-14 px-10">
             <DirectoryRootGrid
