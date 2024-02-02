@@ -1,13 +1,3 @@
-/**
- * This is an example of how to create a template that makes use of streams data.
- * The stream data originates from Yext's Knowledge Graph. When a template in
- * concert with a stream is built by the Yext Pages system, a static html page
- * is generated for every corresponding (based on the filter) stream document.
- *
- * Another way to think about it is that a page will be generated using this
- * template for every eligible entity in your Knowledge Graph.
- */
-
 import {
   GetHeadConfig,
   GetPath,
@@ -25,6 +15,7 @@ import Banner from "../components/Banner";
 import DirectoryCityGrid from "../components/DirectoryCityGrid";
 import PageLayout from "../components/PageLayout";
 import Breadcrumbs from "../components/Breadcrumbs";
+
 
 export const config: TemplateConfig = {
   stream: {
@@ -57,10 +48,6 @@ export const config: TemplateConfig = {
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return `${document.slug.toString()}`;
-};
-
-export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
-  return [`alias/${document.locale}/${document.id.toString()}`];
 };
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({

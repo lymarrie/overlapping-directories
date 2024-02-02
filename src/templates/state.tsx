@@ -48,9 +48,6 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return `${document.slug.toString()}`;
 };
 
-export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
-  return [`alias/${document.locale}/${document.id.toString()}`];
-};
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   document,
