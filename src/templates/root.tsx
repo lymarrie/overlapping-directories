@@ -81,7 +81,7 @@ const Index: Template<TemplateRenderProps> = ({
         <div className="centered-container">
           <div className="section space-y-14 px-10">
             <DirectoryRootGrid
-              name={"Turtlehead Tacos"}
+              name={name}
               directoryChildren={dm_directoryChildren}
               relativePrefixToRoot={relativePrefixToRoot}
             />
